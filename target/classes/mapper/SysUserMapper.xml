@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wgq.mapper.SysUserMapper">
+
+    <select id="getNavMenuIds" resultType="java.lang.Long">
+        SELECT DISTINCT
+            rm.menu_id
+        FROM
+            sys_user_role ur
+            LEFT JOIN sys_role_menu rm ON ur.role_id = rm.role_id
+            LEFT JOIN sys_menu m ON rm.menu_id = m.id
+        WHERE
+            ur.user_id = #{userId}
+--          m.statu="1"  只显示激活状态的菜单nav
+            and m.statu="1"
+    </select>
+
+    <select id="listByMenuId" resultType="com.wgq.entity.SysUser">
+
+        SELECT DISTINCT
+            su.*
+        FROM
+            sys_user_role ur
+        LEFT JOIN sys_role_menu rm ON ur.role_id = rm.role_id
+        LEFT JOIN sys_user su ON ur.user_id = su.id
+        WHERE
+            rm.menu_id = #{menuId}
+    </select>
+    <select id="getGuideUserByUserId" resultType="com.wgq.entity.SysUser">
+        SELECT DISTINCT
+            *
+        FROM
+            sys_user
+        WHERE
+	        id in ( SELECT guide_id FROM adm_class WHERE id in( SELECT class_id FROM sys_user_adm_class WHERE user_id = #{userId} ) )
+	        AND is_top_management != 1
+    </select>
+    <select id="getSecretary" resultType="com.wgq.entity.SysUser">
+        SELECT
+          *
+        FROM
+         sys_user
+        WHERE
+         id = ( SELECT user_id FROM sys_user_role WHERE role_id = ( SELECT id FROM sys_role WHERE CODE = 'superAdmin' ) )
+         AND is_top_management != 1
+    </select>
+    <select id="selectPageVo" resultType="com.wgq.entity.SysUser">
+        select *
+        from sys_user
+        <if test="username !=null and username!= '' ">
+        WHERE username LIKE "%"#{username,jdbcType=VARCHAR}"%"
+        </if>
+        order by created
+    </select>
+    <select id="searchAllUser" resultType="HashMap">
+        SELECT id,`realname`
+        FROM sys_user
+        WHERE statu = 1 and is_top_management != 1
+    </select>
+    <select id="searchName" resultType="java.util.HashMap">
+        SELECT realname
+        FROM sys_user
+        WHERE id = #{userId} AND statu = 1 and is_top_management != 1
+    </select>
+</mapper>

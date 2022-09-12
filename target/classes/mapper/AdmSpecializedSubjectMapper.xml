@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wgq.mapper.AdmSpecializedSubjectMapper">
+
+    <select id="getAdmSpecializedSubjectByUserId" resultType="com.wgq.entity.AdmSpecializedSubject">
+        SELECT
+            *
+        FROM
+            adm_specialized_subject
+        WHERE
+            id IN ( SELECT specialized_subject_id FROM sys_user_adm_specialized_subject WHERE user_id = #{id} )
+    </select>
+</mapper>

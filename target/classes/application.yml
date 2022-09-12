@@ -1,0 +1,116 @@
+server:
+  port: 8081
+
+spring:
+  #邮件设置
+  #spring.mail.host=smtp.exmail.qq.com
+  #暂时改为个人邮箱smtp服务器进行测试
+  mail:
+    #坑爹的地方：host 通道个人邮箱和企业邮箱通道不同。163的个人邮箱：smtp.163.com ，企业邮箱：smtp.qiye.163.com
+    # 腾讯的，个人smtp.qq.com， 企业的：smtp.exmail.qq.com
+    host: smtp.qq.com
+    username: 1154101064@qq.com
+    # 口令是QQ邮箱开通的smtp服务后得到的客户端授权码,不是你的邮箱登录密码
+    password: cyzwadokmhniiddh
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+        # 开启debug，方便查看邮件发送日志
+        debug: true
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueadmin?useUnicode=true&nullCatalogMeansCurrent=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+    #type为druid指定数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    #Spring Boot 默认是不注入这些属性值的,需要自己绑定
+    #druid 数据源专有配置
+    # 初始化大小，最小，最大
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    # 配置获取连接等待超时时间
+    maxWait: 60000
+    # 配置间隔多久进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    # 用来检测连接是否有效的sql，要求是一个查询语句
+    validationQuery: SELECT 1 FROM DUAL
+    # 建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+    testWhileIdle: true
+    #
+    testOnBorrow: false
+    testOnReturn: false
+    # 是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。
+    poolPreparedStatements: true
+    # 配置监控服务器
+    # stat:监控统计
+    # log4j:日志记录(需要导入log4j依赖)
+    # wall:防御sql注入   -- 最好关闭，防止出现使用 IN 关键字出现的 net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "IN" "IN"等问题，官方bug吧应该是。
+    filters: stat,log4j
+    # 要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  #  解决springboot框架整合activiti7时出现报错 bean 'methodSecurityInterceptor', defined in class path resource
+  main:
+    allow-bean-definition-overriding: true
+
+  activiti:
+    #1.flase： 默认值。activiti在启动时，会对比数据库表中保存的版本，如果没有表或者版本不匹配，将抛出异常
+    #2.true： activiti会对数据库中所有表进行更新操作。如果表不存在，则自动创建
+    #3.create_drop： 在activiti启动时创建表，在关闭时删除表（必须手动关闭引擎，才能删除表）
+    #4.drop-create： 在activiti启动时删除原来的旧表，然后在创建新表（不需要手动关闭引擎）
+    database-schema-update: true
+    #检测历史表是否存在 activiti7默认没有开启数据库历史记录 启动数据库历史记录---true 
+    db-history-used: true
+    #记录历史等级 可配置的历史级别有none, activity, audit, full
+    history-level: full
+    #自动检查、部署流程定义文件\校验流程文件，默认校验resources下的processes文件夹里的流程文件  ---这样才能自动部署processes里的bpmn
+    check-process-definitions: true
+
+  redis:
+    password: 12345
+    host: 192.168.245.128
+    database: 0
+
+#  security:
+#    user:
+#      name: user
+#      password: 111111
+
+  #max-file-size代表每个文件的大小限制；max-request-size代表单次请求的大小限制；-1代表不做限制；
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+markerhub:
+  jwt:
+    header: Authorization
+    expire: 604800 #7天，秒为单位，这样就可以实现7天免登录。
+    secret: ji8n3439n439n43ld9ne9343fdfer49h
+#密钥secret一般是32位的字符串（建议但不强制要求）
+
+fastdfs:
+  nginx:
+    host: http://192.168.245.128/
+
+tencent:
+  trtc:
+    appId: 1400582423
+    secretKey: 6e0b685513e6c8921c1e2fb7e2969f2f9eae02fab7a098150d58722978677fe7
+    expire: 86400
+

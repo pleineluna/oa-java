@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "name": "markerhub.jwt",
+      "type": "com.wgq.utils.JwtUtil",
+      "sourceType": "com.wgq.utils.JwtUtil"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.wgq.config.DruidConfig",
+      "sourceMethod": "druidDataSource()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "markerhub.jwt.expire",
+      "type": "java.lang.Long",
+      "sourceType": "com.wgq.utils.JwtUtil",
+      "defaultValue": 0
+    },
+    {
+      "name": "markerhub.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "com.wgq.utils.JwtUtil"
+    },
+    {
+      "name": "markerhub.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.wgq.utils.JwtUtil"
+    }
+  ],
+  "hints": []
+}

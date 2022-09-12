@@ -1,0 +1,24 @@
+<!--
+    这个模板是我随便写的，只定义了一个表格 。
+    Thymeleaf 提供了 TemplateEngine 来对模板进行渲染，通过 Context 构造 模板中变量需要的值，然后在html文件中通过th:text="${xxx}"的方式来引用。
+    context.setVariable("subjectContext",subjectContext );
+    context.setVariable("noticeContent",noticeContent );来设置变量值
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>邮件通知</title>
+</head>
+<body>
+<!--subjectContext是通知的主题-->
+<h2 th:text="${subjectContext}"></h2>
+<table border="0">
+    <tr>
+        <td>通知内容:</td>
+        <!--使用th,html标签内要导入xmlns:th="http://www.thymeleaf.org"-->
+        <td th:text="${noticeContent}"></td>
+    </tr>
+</table>
+</body>
+</html>

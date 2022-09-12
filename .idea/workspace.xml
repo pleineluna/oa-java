@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="71b419e5-9450-4655-b2e9-720d7aa4bb71" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="BpmnFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SORT_ALPHABETICALLY" value="true" />
+  </component>
+  <component name="ProjectId" id="1wvL78sKN6A9ZQEL2TUwpXAmkdI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.markerhub.utils" />
+      <recent name="com.markerhub.controller" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\vueadmin\vueadmin-java" />
+      <recent name="C:\Users\Lenovo\Desktop\vueadmin\vueadmin-java\src\main\java\com\markerhub\service\impl" />
+      <recent name="C:\Users\Lenovo\Desktop\vueadmin\vueadmin-java\src\main\java\com\markerhub\service" />
+      <recent name="C:\Users\Lenovo\Desktop\vueadmin\vueadmin-java\src\main\java\com\markerhub\controller" />
+      <recent name="C:\Users\Lenovo\Desktop\vueadmin\vueadmin-java\src\main\java\com\markerhub\controller\form" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.markerhub.entity.dto" />
+      <recent name="com.markerhub.common.exception" />
+      <recent name="com.markerhub.controller.form" />
+      <recent name="com.markerhub.common.dto" />
+      <recent name="com.markerhub.controller" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.markerhub.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OaJavaApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wgq.CodeGenerator" />
+      <module name="oa-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wgq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OaJavaApplicationTests.activitiHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oa-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wgq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wgq" />
+      <option name="MAIN_CLASS_NAME" value="com.wgq.OaJavaApplicationTests" />
+      <option name="METHOD_NAME" value="activitiHistory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OaJavaApplicationTests.testSendAttachment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oa-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wgq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wgq" />
+      <option name="MAIN_CLASS_NAME" value="com.wgq.OaJavaApplicationTests" />
+      <option name="METHOD_NAME" value="testSendAttachment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OaJavaApplicationTests.testSendHtmlMailThymeLeaf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oa-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wgq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wgq" />
+      <option name="MAIN_CLASS_NAME" value="com.wgq.OaJavaApplicationTests" />
+      <option name="METHOD_NAME" value="testSendHtmlMailThymeLeaf" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OaJavaApplicationTests.testSendSimpleMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oa-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wgq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wgq" />
+      <option name="MAIN_CLASS_NAME" value="com.wgq.OaJavaApplicationTests" />
+      <option name="METHOD_NAME" value="testSendSimpleMail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OaJavaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="oa-java" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wgq.OaJavaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="D:\Java\jdk1.8.0_20\jre" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="JUnit.OaJavaApplicationTests.activitiHistory" />
+      <item itemvalue="JUnit.OaJavaApplicationTests.testSendSimpleMail" />
+      <item itemvalue="JUnit.OaJavaApplicationTests.testSendAttachment" />
+      <item itemvalue="JUnit.OaJavaApplicationTests.testSendHtmlMailThymeLeaf" />
+      <item itemvalue="Spring Boot.OaJavaApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeGenerator" />
+        <item itemvalue="JUnit.OaJavaApplicationTests.testSendHtmlMailThymeLeaf" />
+        <item itemvalue="JUnit.OaJavaApplicationTests.testSendAttachment" />
+        <item itemvalue="JUnit.OaJavaApplicationTests.testSendSimpleMail" />
+        <item itemvalue="JUnit.OaJavaApplicationTests.activitiHistory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71b419e5-9450-4655-b2e9-720d7aa4bb71" name="Default Changelist" comment="" />
+      <created>1629333950900</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629333950900</updated>
+      <workItem from="1629333970663" duration="1014000" />
+      <workItem from="1630373994994" duration="3968000" />
+      <workItem from="1630378166620" duration="17704000" />
+      <workItem from="1630455644296" duration="11964000" />
+      <workItem from="1630541893067" duration="22158000" />
+      <workItem from="1630633384414" duration="14607000" />
+      <workItem from="1630719429965" duration="10699000" />
+      <workItem from="1630805202231" duration="11379000" />
+      <workItem from="1630889842099" duration="14657000" />
+      <workItem from="1630977571349" duration="12168000" />
+      <workItem from="1631062608897" duration="6922000" />
+      <workItem from="1631074526859" duration="768000" />
+      <workItem from="1631091420456" duration="779000" />
+      <workItem from="1631150994642" duration="6593000" />
+      <workItem from="1631170868329" duration="4117000" />
+      <workItem from="1631232218255" duration="17263000" />
+      <workItem from="1631320928556" duration="8178000" />
+      <workItem from="1631331157089" duration="12016000" />
+      <workItem from="1631409236097" duration="27096000" />
+      <workItem from="1631494942066" duration="24883000" />
+      <workItem from="1631583431528" duration="20346000" />
+      <workItem from="1631758603982" duration="10416000" />
+      <workItem from="1631865133223" duration="9929000" />
+      <workItem from="1631929626315" duration="17229000" />
+      <workItem from="1632019944932" duration="11365000" />
+      <workItem from="1632100699787" duration="8821000" />
+      <workItem from="1632192004056" duration="994000" />
+      <workItem from="1633574113754" duration="2429000" />
+      <workItem from="1633577085438" duration="3382000" />
+      <workItem from="1634976334173" duration="8899000" />
+      <workItem from="1635058644609" duration="12162000" />
+      <workItem from="1635145488515" duration="21013000" />
+      <workItem from="1635231608935" duration="14579000" />
+      <workItem from="1635489552251" duration="22720000" />
+      <workItem from="1635576751004" duration="7497000" />
+      <workItem from="1635749357049" duration="7247000" />
+      <workItem from="1636960251123" duration="11787000" />
+      <workItem from="1637046862475" duration="5224000" />
+      <workItem from="1637306334386" duration="5400000" />
+      <workItem from="1637393201204" duration="19076000" />
+      <workItem from="1637479334116" duration="10334000" />
+      <workItem from="1637564611321" duration="8379000" />
+      <workItem from="1637650904804" duration="5290000" />
+      <workItem from="1637890265167" duration="1418000" />
+      <workItem from="1637909134862" duration="10660000" />
+      <workItem from="1637996212954" duration="4403000" />
+      <workItem from="1638082388513" duration="6243000" />
+      <workItem from="1638170071964" duration="9055000" />
+      <workItem from="1638257202796" duration="16554000" />
+      <workItem from="1638341360395" duration="16440000" />
+      <workItem from="1638515944558" duration="14946000" />
+      <workItem from="1638535880858" duration="56000" />
+      <workItem from="1638600289003" duration="10219000" />
+      <workItem from="1638775580290" duration="12371000" />
+      <workItem from="1638861218000" duration="8628000" />
+      <workItem from="1638970795128" duration="792000" />
+      <workItem from="1639038412696" duration="66000" />
+      <workItem from="1639038504350" duration="296000" />
+      <workItem from="1639119466960" duration="10163000" />
+      <workItem from="1639205744449" duration="12701000" />
+      <workItem from="1639291998705" duration="8794000" />
+      <workItem from="1639553411083" duration="12730000" />
+      <workItem from="1639638724732" duration="8995000" />
+      <workItem from="1639722754488" duration="5687000" />
+      <workItem from="1641429690812" duration="4031000" />
+      <workItem from="1641515552502" duration="16735000" />
+      <workItem from="1641687899195" duration="746000" />
+      <workItem from="1645166848618" duration="3075000" />
+      <workItem from="1646186245061" duration="5013000" />
+      <workItem from="1646273848128" duration="6033000" />
+      <workItem from="1646360662324" duration="1696000" />
+      <workItem from="1646459609513" duration="904000" />
+      <workItem from="1646805126886" duration="2372000" />
+      <workItem from="1647868669322" duration="796000" />
+      <workItem from="1648196122580" duration="701000" />
+      <workItem from="1648272295499" duration="1383000" />
+      <workItem from="1648366502199" duration="7297000" />
+      <workItem from="1648449600946" duration="11907000" />
+      <workItem from="1648621570619" duration="2431000" />
+      <workItem from="1648632712330" duration="3068000" />
+      <workItem from="1649224966368" duration="3369000" />
+      <workItem from="1649322219965" duration="659000" />
+      <workItem from="1650019018999" duration="839000" />
+      <workItem from="1650441113516" duration="898000" />
+      <workItem from="1651197865568" duration="4542000" />
+      <workItem from="1654767435902" duration="1518000" />
+      <workItem from="1658229130684" duration="841000" />
+      <workItem from="1660220504089" duration="2227000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="197" y="64" width="996" height="712" key="SettingsEditor" timestamp="1660221052284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="197" y="64" width="996" height="712" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1660221052284" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1660220899773">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1660220899773" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vueadmin_java$VueadminJavaApplication.ic" NAME="VueadminJavaApplication Coverage Results" MODIFIED="1634978562231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

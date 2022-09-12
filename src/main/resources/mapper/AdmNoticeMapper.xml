@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wgq.mapper.AdmNoticeMapper">
+
+    <select id="getLeaveNoticeListByReceiverId" resultType="com.wgq.entity.AdmNotice">
+        SELECT
+            *
+        FROM
+            adm_notice
+        WHERE
+            receiver_id = #{receiverId}
+            AND
+            type = 1
+        ORDER BY
+            created DESC
+    </select>
+    <select id="selectNoticeByUuid" resultType="com.wgq.entity.AdmNotice">
+        SELECT
+            *
+        FROM
+            adm_notice
+        WHERE
+            uuid=#{uuid}
+    </select>
+    <select id="getCollegeNotice" resultType="com.wgq.entity.AdmNotice">
+        SELECT
+            *
+        FROM
+            adm_notice
+        WHERE
+            type = 3
+            OR (
+            type = 2
+            AND publisher_id = #{guiderId})
+            ORDER BY created DESC
+    </select>
+    <select id="getMeetingNoticeListByReceiverId" resultType="com.wgq.entity.AdmNotice">
+        SELECT
+            *
+        FROM
+            adm_notice
+        WHERE
+            receiver_id = #{receiverId}
+            AND
+            type = 4
+        ORDER BY
+            created DESC
+    </select>
+    <select id="selectNoticeByRealname" resultType="com.wgq.entity.dto.AdmNoticeDto">
+        SELECT
+            an.*,
+            u.realname
+            FROM
+            adm_notice an
+        LEFT JOIN sys_user u ON an.receiver_id = u.id
+        WHERE
+        1 = 1
+        <if test="realname !=null and realname!= '' ">
+            AND an.receiver_id IN ( SELECT id FROM sys_user
+             WHERE realname LIKE "%"#{realname,jdbcType=VARCHAR}"%" )
+        </if>
+        <if test="type !=null and type!='' and type =='1'.toString() ">
+            AND an.type = 1
+        </if>
+        <if test="type !=null and type!='' and type =='2and3'.toString() ">
+            AND an.type = 2
+            OR  an.type = 3
+        </if>
+        <if test="type !=null and type!='' and type =='4'.toString() ">
+            AND an.type = 4
+        </if>
+        <if test="type !=null and type!='' and type =='5'.toString() ">
+            AND an.type = 5
+        </if>
+        ORDER BY
+            an.created DESC
+    </select>
+    <select id="selectAdmNoticeDtoById" resultType="com.wgq.entity.dto.AdmNoticeDto">
+        SELECT
+        an.*,
+        u.realname
+        FROM
+        adm_notice an
+        LEFT JOIN sys_user u ON an.receiver_id = u.id
+        WHERE
+        an.id =#{id}
+        ORDER BY
+        an.created DESC
+    </select>
+    <select id="getScholarshipNoticeListByReceiverId" resultType="com.wgq.entity.AdmNotice">
+                SELECT
+            *
+        FROM
+            adm_notice
+        WHERE
+            receiver_id = #{receiverId}
+            AND
+            type = 5
+        ORDER BY
+            created DESC
+    </select>
+</mapper>
